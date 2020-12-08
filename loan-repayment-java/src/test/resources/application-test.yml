@@ -1,0 +1,14 @@
+enable:
+    oauth: true
+open:
+    urls: /v3/api-docs,/swagger-ui/**,/swagger-resources/**,/swagger-resources/configuration/**,/swagger-ui.html,/v2/api-docs,/webjars/**,/webjars/springfox-swagger-ui/**,/webjars/springfox-swagger-ui/images/**,webjars/springfox-swagger-ui/css/**
+secured:
+    urls: /**
+security:
+    oauth2:
+        client:
+            client-id: 2e2d8b3b-bf29-42a4-8194-d768a41453dd
+            client-secret: d246d4a7-2d68-46e5-b053-1c937eeba9b7
+root:
+  log:
+   level: DEBUG

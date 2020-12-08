@@ -1,0 +1,12 @@
+{
+    "borrowerPayments": [
+        {
+            "borrowerPaymentAmount": "12090.00",
+            "date": "2018-01-01T00:00:01Z",
+            "initialOutstandingPrincipal": "12000.0",
+            "interest": "90.00",
+            "principal": "12000.0",
+            "remainingOutstandingPrincipal": "0"
+        }
+    ]
+}

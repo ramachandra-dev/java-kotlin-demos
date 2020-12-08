@@ -1,0 +1,52 @@
+{
+    "borrowerPayments": [
+        {
+            "borrowerPaymentAmount": "2052.83",
+            "date": "2018-01-01T00:00:01Z",
+            "initialOutstandingPrincipal": "12000.0",
+            "interest": "90.00",
+            "principal": "1962.83",
+            "remainingOutstandingPrincipal": "10037.17"
+        },
+        {
+            "borrowerPaymentAmount": "2052.83",
+            "date": "2018-02-01T00:00:01Z",
+            "initialOutstandingPrincipal": "10037.17",
+            "interest": "75.28",
+            "principal": "1977.55",
+            "remainingOutstandingPrincipal": "8059.62"
+        },
+        {
+            "borrowerPaymentAmount": "2052.83",
+            "date": "2018-03-01T00:00:01Z",
+            "initialOutstandingPrincipal": "8059.62",
+            "interest": "60.45",
+            "principal": "1992.38",
+            "remainingOutstandingPrincipal": "6067.24"
+        },
+        {
+            "borrowerPaymentAmount": "2052.83",
+            "date": "2018-04-01T00:00:01Z",
+            "initialOutstandingPrincipal": "6067.24",
+            "interest": "45.50",
+            "principal": "2007.33",
+            "remainingOutstandingPrincipal": "4059.91"
+        },
+        {
+            "borrowerPaymentAmount": "2052.83",
+            "date": "2018-05-01T00:00:01Z",
+            "initialOutstandingPrincipal": "4059.91",
+            "interest": "30.45",
+            "principal": "2022.38",
+            "remainingOutstandingPrincipal": "2037.53"
+        },
+        {
+            "borrowerPaymentAmount": "2052.81",
+            "date": "2018-06-01T00:00:01Z",
+            "initialOutstandingPrincipal": "2037.53",
+            "interest": "15.28",
+            "principal": "2037.53",
+            "remainingOutstandingPrincipal": "0"
+        }
+    ]
+}
