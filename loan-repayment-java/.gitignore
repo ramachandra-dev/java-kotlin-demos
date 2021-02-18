@@ -1,5 +1,8 @@
 # Compiled class file
 *.class
+*.classpath
+*.project
+*.settings/
 
 # Log file
 *.log
@@ -18,66 +21,9 @@
 *.zip
 *.tar.gz
 *.rar
-*.idea
-
-/target/
-/.project
-/.classpath
-/.settings/org.eclipse.jdt.core.prefs
-/.settings/org.eclipse.ltk.core.refactoring.prefs
-/.settings/org.eclipse.m2e.core.prefs
-/shelf/
-/workspace.xml
-/*.idea
-/bin
-
-### JetBrains ###
-
-# User-specific stuff:
-.idea/workspace.xml
-.idea/tasks.xml
-.idea/dictionaries
-.idea/vcs.xml
-.idea/jsLibraryMappings.xml
-
-# Sensitive or high-churn files:
-.idea/dataSources.ids
-.idea/dataSources.xml
-.idea/dataSources.local.xml
-.idea/sqlDataSources.xml
-.idea/dynamic.xml
-.idea/uiDesigner.xml
-
-# Gradle:
-.idea/gradle.xml
-.idea/libraries
-
-# Mongo Explorer plugin:
-.idea/mongoSettings.xml
-
-## File-based project format:
-*.iws
-
-## Plugin-specific files:
-
-# IntelliJ
-/out/
-
-# mpeltonen/sbt-idea plugin
-.idea_modules/
-
-# JIRA plugin
-atlassian-ide-plugin.xml
-
-# Crashlytics plugin (for Android Studio and IntelliJ)
-com_crashlytics_export_strings.xml
-crashlytics.properties
-crashlytics-build.properties
-fabric.properties
-
-### JetBrains Patch ###
+*.idea/
 *.iml
-*.idea
-modules.xml
-.idea/misc.xml 
-*.ipr
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+/target/
