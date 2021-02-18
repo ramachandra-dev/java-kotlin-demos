@@ -17,15 +17,6 @@ object ApplicationExceptionFactory {
     }
 
     /**
-     * This method creates application exception for Loan Amount null
-     *
-     * @return ApplicationException
-     */
-    fun createApplicationExceptionWithNullLoanAmount() : ApplicationException {
-        return ApplicationException("Loan Amount should not be blank to for Generating the Repayment Schedule")
-    }
-
-    /**
      * This method creates application exception for Zero loan amount
      *
      * @return ApplicationException

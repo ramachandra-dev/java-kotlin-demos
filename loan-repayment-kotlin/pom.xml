@@ -21,8 +21,7 @@
         <maven.compiler.release>14</maven.compiler.release>
         <kotlin.compiler.languageVersion>1.5</kotlin.compiler.languageVersion>
         <kotlin.compiler.jvmTarget>14</kotlin.compiler.jvmTarget>
-        <kotlin.loggin.version>1.12.0</kotlin.loggin.version>
-        <kotlin.version>1.4.20</kotlin.version>
+        <kotlin.version>1.4.30</kotlin.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
     </properties>
@@ -115,18 +114,15 @@
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-test</artifactId>
-            <version>${kotlin.version}</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jetbrains.kotlin</groupId>
             <artifactId>kotlin-stdlib-jdk8</artifactId>
-            <version>${kotlin.version}</version>
         </dependency>
         <dependency>
             <groupId>io.github.microutils</groupId>
             <artifactId>kotlin-logging</artifactId>
-            <version>${kotlin.loggin.version}</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
@@ -148,12 +144,10 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-                <version>${spring.boot.version}</version>
             </plugin>
             <plugin>
                 <groupId>org.jetbrains.kotlin</groupId>
                 <artifactId>kotlin-maven-plugin</artifactId>
-                <version>${kotlin.version}</version>
                 <configuration>
                     <args>
                         <arg>-Xjsr305=strict</arg>

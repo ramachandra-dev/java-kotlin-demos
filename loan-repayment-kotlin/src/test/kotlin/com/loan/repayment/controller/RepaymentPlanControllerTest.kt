@@ -24,7 +24,7 @@ class RepaymentPlanControllerTest {
 
     @Test
     fun testRepaymentPlan() {
-        var request = RepaymentPlanRequestFactory.createRepaymentPlanRequest()
+        val request = RepaymentPlanRequestFactory.createRepaymentPlanRequest()
         every { repaymentPlanService.repaymentPlan(request) } returns
                 RepaymentPlanResponseFactory.createRepaymentPlanResponse()
         val banksResponse = repaymentPlanController.repaymentPlan(request)
@@ -61,7 +61,7 @@ class RepaymentPlanControllerTest {
     @Test
     fun testRepaymentPlanWithBlankLoanAmount() {
         val exception : ApplicationException = assertThrows(ApplicationException::class.java) {
-            var request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithBlankLoanAmount()
+            val request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithBlankLoanAmount()
             every { repaymentPlanService.repaymentPlan(request) } throws
                     ApplicationExceptionFactory.createApplicationExceptionWithBlankLoanAmount()
             repaymentPlanController.repaymentPlan(request)
@@ -75,7 +75,7 @@ class RepaymentPlanControllerTest {
     @Test
     fun testRepaymentPlanWithZeroLoanAmount() {
         val exception : ApplicationException = assertThrows(ApplicationException::class.java) {
-            var request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithZeroLoanAmount()
+            val request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithZeroLoanAmount()
             every { repaymentPlanService.repaymentPlan(request) } throws
                     ApplicationExceptionFactory.createApplicationExceptionWithZeroLoanAmount()
             repaymentPlanController.repaymentPlan(request)
@@ -89,7 +89,7 @@ class RepaymentPlanControllerTest {
     @Test
     fun testRepaymentPlanWithInvalidDoubleLoanAmount() {
         val exception : ApplicationException = assertThrows(ApplicationException::class.java) {
-            var request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithInvalidDoubleLoanAmount()
+            val request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithInvalidDoubleLoanAmount()
             every { repaymentPlanService.repaymentPlan(request) } throws
                     ApplicationExceptionFactory.createApplicationExceptionWithInvalidDoubleLoanAmount()
             repaymentPlanController.repaymentPlan(request)
@@ -103,7 +103,7 @@ class RepaymentPlanControllerTest {
     @Test
     fun testRepaymentPlanWithNullNominalRate() {
         val exception : ApplicationException = assertThrows(ApplicationException::class.java) {
-            var request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithNullNominalRate()
+            val request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithNullNominalRate()
             every { repaymentPlanService.repaymentPlan(request) } throws
                     ApplicationExceptionFactory.createApplicationExceptionWithNullNominalRate()
             repaymentPlanController.repaymentPlan(request)
@@ -117,7 +117,7 @@ class RepaymentPlanControllerTest {
     @Test
     fun testRepaymentPlanWithBlankNominalRate() {
         val exception : ApplicationException = assertThrows(ApplicationException::class.java) {
-            var request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithBlankNominalRate()
+            val request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithBlankNominalRate()
             every { repaymentPlanService.repaymentPlan(request) } throws
                     ApplicationExceptionFactory.createApplicationExceptionWithBlankNominalRate()
             repaymentPlanController.repaymentPlan(request)
@@ -131,7 +131,7 @@ class RepaymentPlanControllerTest {
     @Test
     fun testRepaymentPlanWithZeroNominalRate() {
         val exception : ApplicationException = assertThrows(ApplicationException::class.java) {
-            var request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithZeroNominalRate()
+            val request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithZeroNominalRate()
             every { repaymentPlanService.repaymentPlan(request) } throws
                     ApplicationExceptionFactory.createApplicationExceptionWithZeroNominalRate()
             repaymentPlanController.repaymentPlan(request)
@@ -145,7 +145,7 @@ class RepaymentPlanControllerTest {
     @Test
     fun testRepaymentPlanWithInvalidDoubleNominalRate() {
         val exception : ApplicationException = assertThrows(ApplicationException::class.java) {
-            var request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithInvalidDoubleNominalRate()
+            val request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithInvalidDoubleNominalRate()
             every { repaymentPlanService.repaymentPlan(request) } throws
                     ApplicationExceptionFactory.createApplicationExceptionWithInvalidDoubleNominalRate()
             repaymentPlanController.repaymentPlan(request)
@@ -159,7 +159,7 @@ class RepaymentPlanControllerTest {
     @Test
     fun testRepaymentPlanWithInValidTenureWithLoanSchedule() {
         val exception : ApplicationException = assertThrows(ApplicationException::class.java) {
-            var request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithInValidTenureWithLoanSchedule()
+            val request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithInValidTenureWithLoanSchedule()
             every { repaymentPlanService.repaymentPlan(request) } throws
                     ApplicationExceptionFactory.createApplicationExceptionWithInValidTenureWithLoanSchedule()
             repaymentPlanController.repaymentPlan(request)
@@ -173,7 +173,7 @@ class RepaymentPlanControllerTest {
     @Test
     fun testRepaymentPlanWithZeroMonthsDuration() {
         val exception : ApplicationException = assertThrows(ApplicationException::class.java) {
-            var request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithZeroMonthsDuration()
+            val request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithZeroMonthsDuration()
             every { repaymentPlanService.repaymentPlan(request) } throws
                     ApplicationExceptionFactory.createApplicationExceptionWithZeroMonthsDuration()
             repaymentPlanController.repaymentPlan(request)
@@ -186,13 +186,13 @@ class RepaymentPlanControllerTest {
 
     @Test
     fun testRepaymentPlanWithOneMonthsDuration() {
-        var request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithOneMonthDuration()
+        val request = RepaymentPlanRequestFactory.createRepaymentPlanRequestWithOneMonthDuration()
         every { repaymentPlanService.repaymentPlan(request) } returns
                 RepaymentPlanResponseFactory.createRepaymentPlanResponseSingleMonth()
         val banksResponse = repaymentPlanController.repaymentPlan(request)
         assertEquals(1 , banksResponse.body!!.borrowerPayments.size , "Expected the payments to be 1")
         val borrowerPayments = banksResponse.body!!.borrowerPayments
-        val borrowerPayment = borrowerPayments.get(0)
+        val borrowerPayment = borrowerPayments[0]
         assertEquals("12090.00" , borrowerPayment.borrowerPaymentAmount , "Expected to match")
         assertEquals("12000.0" , borrowerPayment.initialOutstandingPrincipal , "Expected to match")
         assertEquals("90.00" , borrowerPayment.interest , "Expected to match")

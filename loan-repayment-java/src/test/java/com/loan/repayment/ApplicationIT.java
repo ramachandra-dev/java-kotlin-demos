@@ -8,15 +8,12 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.context.SpringBootTest.WebEnvironment;
 import org.springframework.core.env.Environment;
 
-import lombok.extern.slf4j.Slf4j;
-
 /**
  * 
  * @author Ramachandra
  *
  */
 @SpringBootTest(webEnvironment = WebEnvironment.RANDOM_PORT)
-@Slf4j
 class ApplicationIT {
     
     /**

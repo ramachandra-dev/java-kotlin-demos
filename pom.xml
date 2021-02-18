@@ -16,21 +16,25 @@
 		<maven.compiler.source>15</maven.compiler.source>
 		<!-- After JDK 9 -->
 		<maven.compiler.release>15</maven.compiler.release>
-		<junit.version>5.5.2</junit.version>
-		<assertj.version>3.18.1</assertj.version>
-		<slf4j.version>1.7.30</slf4j.version>
 		<!-- lombok -->
-		<lombok.version>1.18.16</lombok.version>
+		<lombok.version>1.18.18</lombok.version>
 		<!-- Kotlin -->
-		<kotlin.version>1.4.20</kotlin.version>
+		<kotlin.version>1.4.30</kotlin.version>
 		<kotlin.loggin.version>1.12.0</kotlin.loggin.version>
 		<!-- Spring Boot -->
-		<spring.boot.version>2.4.0</spring.boot.version>
+		<spring.boot.version>2.4.2</spring.boot.version>
 		<!-- Swagger -->
 		<springfox.swagger.version>3.0.0</springfox.swagger.version>
 		<!-- OAuth2 -->
 		<spring.oauth2.version>2.3.6.RELEASE</spring.oauth2.version>
 		<spring.oauth2.autoconfigure.version>2.2.1.RELEASE</spring.oauth2.autoconfigure.version>
+		<!-- Tests -->
+		<junit.version>5.7.1</junit.version>
+		<assertj.version>3.19.0</assertj.version>
+		<gatling.version>3.5.1</gatling.version>
+		<mockk.version>1.10.6</mockk.version>
+		<!-- log4j -->
+		<slf4j.version>1.7.30</slf4j.version>
 		<!-- Plugins -->
 		<maven.site.version>3.9.0</maven.site.version>
 		<maven.projectinfo.version>3.1.1</maven.projectinfo.version>
@@ -38,8 +42,6 @@
 		<maven.checkstyle.version>3.1.1</maven.checkstyle.version>
 		<maven.javadoc.version>3.2.0</maven.javadoc.version>
 		<jackson.version>2.11.3</jackson.version>
-		<gatling.version>3.4.2</gatling.version>
-		<mockk.version>1.10.3</mockk.version>
 		<gatling-maven-plugin.version>3.4.2</gatling-maven-plugin.version>
 		<scala-maven-plugin.version>4.4.0</scala-maven-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -50,6 +52,8 @@
 		<module>programs-basic-kotlin</module>
 		<module>loan-repayment-java</module>
 		<module>loan-repayment-kotlin</module>
+		<module>occupancy-manager-java</module>
+		<module>occupancy-manager-kotlin</module>
 	</modules>
 	<dependencyManagement>
 		<dependencies>
@@ -107,7 +111,6 @@
 				<groupId>io.github.microutils</groupId>
 				<artifactId>kotlin-logging</artifactId>
 				<version>${kotlin.loggin.version}</version>
-				<type>pom</type>
 			</dependency>
 			<dependency>
 				<groupId>com.fasterxml.jackson.core</groupId>

@@ -17,7 +17,7 @@ import java.io.IOException
 private val logger = KotlinLogging.logger {}
 class JsonUtil {
     /**
-     * This method read the json data from the file and deseralizes as Pojo
+     * This method read the json data from the file and deserializes as Pojo
      *
      * @param fileName Filename of the json
      * @param classz   Class
@@ -30,8 +30,7 @@ class JsonUtil {
             logger.debug("Error occurred while fetching the data {}" , e)
         }
         return null
-    }//@formatter:off
-    //@formatter:on
+    }
     /**`
      * This method creates the object mapper with the required modules
      *
@@ -45,7 +44,7 @@ class JsonUtil {
                     .registerModule(Jdk8Module())
                     .registerModule(JavaTimeModule())
             mapper.disable(SerializationFeature.WRITE_DATES_AS_TIMESTAMPS)
-            mapper.setDateFormat(StdDateFormat())
+            mapper.dateFormat = StdDateFormat()
             //@formatter:on
             return mapper
         }
