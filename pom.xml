@@ -41,7 +41,7 @@
 		<jacoco.version>0.8.6</jacoco.version>
 		<maven.checkstyle.version>3.1.1</maven.checkstyle.version>
 		<maven.javadoc.version>3.2.0</maven.javadoc.version>
-		<jackson.version>2.11.3</jackson.version>
+		<jackson.version>2.13.4.1</jackson.version>
 		<gatling-maven-plugin.version>3.4.2</gatling-maven-plugin.version>
 		<scala-maven-plugin.version>4.4.0</scala-maven-plugin.version>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
