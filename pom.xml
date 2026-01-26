@@ -30,7 +30,7 @@
 		<spring.oauth2.autoconfigure.version>2.2.1.RELEASE</spring.oauth2.autoconfigure.version>
 		<!-- Tests -->
 		<junit.version>5.7.1</junit.version>
-		<assertj.version>3.19.0</assertj.version>
+		<assertj.version>3.27.7</assertj.version>
 		<gatling.version>3.5.1</gatling.version>
 		<mockk.version>1.10.6</mockk.version>
 		<!-- log4j -->
